@@ -8,9 +8,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/find', function(req, res, next) {
-  sampleService.find(function(data){
-    res.send(data);
-  });
+    sampleService.find(function(data){
+      res.send(data);
+    });
+  
 });
 
 router.post('/create', function(req, res, next) {
@@ -18,5 +19,9 @@ router.post('/create', function(req, res, next) {
     res.send(data);
   });
 });
+
+var callback = function(data) {
+
+};
 
 module.exports = router;
